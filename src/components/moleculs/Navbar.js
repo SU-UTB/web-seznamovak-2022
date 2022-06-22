@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import MenuLink from '../atoms/MenuLink'
 import SocialIcon from '../atoms/SocialIcon'
+import fbIcon from '../../assets/img/navbar/fb.svg'
+import igIcon from '../../assets/img/navbar/ig.svg'
 
 const Navbar = () => {
   const menuLinks = [
@@ -13,14 +15,12 @@ const Navbar = () => {
   ]
 
   const [socialLinks] = useState([
-    { socialLink: 'https://www.instagram.com/studentskaunieutb/', socialIconImg: '', socialPlatform: 'instagram' },
-    { socialLink: 'https://www.facebook.com/studentskaunieutb', socialIconImg: '', socialPlatform: 'facebook' }
+    { socialLink: 'https://www.instagram.com/studentskaunieutb/', socialIconImg: igIcon, socialPlatform: 'instagram' },
+    { socialLink: 'https://www.facebook.com/studentskaunieutb', socialIconImg: fbIcon, socialPlatform: 'facebook' }
   ])
-
 
   return (
     <nav>
-
       <ul>
         {menuLinks.map(({ sectionLink, sectionName }) => (
           <li key={sectionLink}>

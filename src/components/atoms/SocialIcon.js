@@ -2,7 +2,7 @@ import React from 'react'
 
 const SocialIcon = ({ socialLink, socialIconImg, socialPlatform }) => {
   return (
-    <a href={socialLink}>
+    <a href={socialLink} target="_blank" rel="nopener noreferrer">
       <img src={socialIconImg} alt={socialPlatform} />
     </a>
   )
