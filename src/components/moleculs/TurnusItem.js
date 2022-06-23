@@ -1,5 +1,3 @@
-import React from 'react'
-
 const TurnusItem = ({ title, date, availablePlaces, totalPlaces, linkToAssign, color }) => {
   return (
     <div className="turnus">

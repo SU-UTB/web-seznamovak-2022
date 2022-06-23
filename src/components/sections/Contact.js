@@ -1,4 +1,3 @@
-import React from 'react'
 import Organiser from '../moleculs/Organiser'
 import ContactSocials from '../moleculs/ContactSocials'
 import { documents } from '../../data/documents'

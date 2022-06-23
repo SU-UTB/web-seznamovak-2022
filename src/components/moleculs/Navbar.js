@@ -3,8 +3,11 @@ import MenuLink from '../atoms/MenuLink'
 import SocialIcon from '../atoms/SocialIcon'
 import fbIcon from '../../assets/img/navbar/fb.svg'
 import igIcon from '../../assets/img/navbar/ig.svg'
+import HamburgerBtn from '../atoms/HamburgerBtn'
 
 const Navbar = () => {
+  const [isNavOpened, setIsNavOpened] = useState(false)
+
   const menuLinks = [
     { sectionLink: 'prihlaska', sectionName: 'PŘIHLÁŠKA' },
     { sectionLink: 'info', sectionName: 'INFORMACE' },
@@ -14,29 +17,34 @@ const Navbar = () => {
     { sectionLink: 'kontakt', sectionName: 'KONTAKT' }
   ]
 
-  const [socialLinks] = useState([
+  const socialLinks = [
     { socialLink: 'https://www.instagram.com/studentskaunieutb/', socialIconImg: igIcon, socialPlatform: 'instagram' },
     { socialLink: 'https://www.facebook.com/studentskaunieutb', socialIconImg: fbIcon, socialPlatform: 'facebook' }
-  ])
+  ]
+  
 
   return (
-    <nav>
-      <ul>
-        {menuLinks.map(({ sectionLink, sectionName }) => (
-          <li key={sectionLink}>
-            <MenuLink sectionLink={sectionLink} sectionName={sectionName} />
-          </li>
-        ))}
-      </ul>
-      <ul>
-        { socialLinks.map(({ socialLink, socialIconImg, socialPlatform }) => (
-          <li key={socialLink}>
-            <SocialIcon socialLink={socialLink} socialIconImg={socialIconImg} socialPlatform={socialPlatform} />
-          </li>
-        ))
-        }
-      </ul>
-    </nav>
+    <header className="sticky h-16 top-0 w-full bg-dark_blu">
+      <nav className="flex flex-col items-center relative">
+        <HamburgerBtn onClick={() => setIsNavOpened(!isNavOpened)} isNavOpened={isNavOpened} />
+        <ul className={'bg-dark_blu flex flex-col lg:flex-row flex-wrap lg:justify-evenly items-center w-full absolute lg:static top-16 h-screen lg:h-auto lg:top-0 transition-all duration-300 ' + (isNavOpened ? 'translate-x-0' : 'lg:translate-x-0 -translate-x-full')}>
+          {menuLinks.map(({ sectionLink, sectionName }) => (
+            <li className="my-4" key={sectionLink}>
+              <MenuLink sectionLink={sectionLink} sectionName={sectionName} />
+            </li>
+          ))}
+          <div className="lg:hidden flex flex-wrap my-12">
+          { socialLinks.map(({ socialLink, socialIconImg, socialPlatform }) => (
+            <div className="mx-8" key={socialLink}>
+              <SocialIcon socialLink={socialLink} socialIconImg={socialIconImg} socialPlatform={socialPlatform} />
+            </div>
+          ))
+          }
+        </div>
+        </ul>
+        
+      </nav>
+    </header>
   )
 }
 

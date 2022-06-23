@@ -1,5 +1,3 @@
-import React from 'react'
-
 const Aftermovie = () => {
   const ytSources = [
     'https://www.youtube.com/embed/3USX4ZVBYuw',

@@ -1,5 +1,3 @@
-import React from 'react'
-
 const SectionTitle = ({ title, color = '#000' }) => {
   const colorRegex = new RegExp('^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$')
 

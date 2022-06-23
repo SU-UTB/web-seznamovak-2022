@@ -1,8 +1,6 @@
-import React from 'react'
-
 const MenuLink = ({ sectionLink, sectionName }) => {
   return (
-    <a href={sectionLink}>{sectionName}</a>
+    <a className="text-beige uppercase font-semibold text-xl" href={`#${sectionLink}`}>{sectionName}</a>
   )
 }
 

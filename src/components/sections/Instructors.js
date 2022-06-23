@@ -1,4 +1,3 @@
-import React from 'react'
 import SectionTitle from '../atoms/SectionTitle'
 import instructors from '../../data/instructorsList'
 import { Swiper, SwiperSlide } from 'swiper/react'

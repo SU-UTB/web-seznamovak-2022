@@ -1,4 +1,3 @@
-import React from 'react'
 import PartnerList from '../organisms/PartnerList'
 import { utb, facultyList, unionList, partnerList } from '../../data/partnerList'
 import Link from '../atoms/Link'
