@@ -8,11 +8,13 @@ import Faq from './components/sections/Faq'
 import Information from './components/sections/Information'
 import Map from './components/sections/Map'
 import Partners from './components/sections/Partners'
+import Overlay from './components/sections/Overlay'
 
 const App = () => {
 	return (
 		<div className="App">
 			<Navbar />
+			<Overlay />
 			<Contact />
 			<Faq />
 			<Information />
