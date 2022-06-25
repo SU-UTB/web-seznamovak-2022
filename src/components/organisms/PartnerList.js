@@ -6,7 +6,7 @@ const PartnerList = ({ items }) => {
       {
         items.map(item => (
           <div key={item.link}>
-            <Link>
+            <Link linkTo={item.link}>
 							<img src={item.pic} alt={item.picAlt} loading="lazy" />
             </Link>
           </div>
