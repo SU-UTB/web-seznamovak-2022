@@ -7,6 +7,7 @@ import Link from '../atoms/Link'
 import SectionTitle from '../atoms/SectionTitle'
 import ContactTitle from '../atoms/ContactTitle'
 import SuSocials from '../moleculs/SuSocials'
+import '../../scss/Contact.scss'
 
 const Contact = () => {
 
@@ -38,7 +39,7 @@ const Contact = () => {
             ))
           }
       </div>
-      <div className="lg:grid lg:grid-flow-col lg:gap-x-8 2xl:gap-x-20 text-center lg:text-left mx-auto lg:w-4/5">
+      <div className="lg:grid lg:grid-flow-col lg:gap-x-8 2xl:gap-x-20 text-center lg:text-left mx-auto lg:w-4/5 pb-12">
         <Organiser />
         <div className="documents lg:col-span-2">
           <ContactTitle title="dokumenty" />
