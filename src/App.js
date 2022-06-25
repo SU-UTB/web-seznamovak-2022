@@ -16,9 +16,9 @@ const App = () => {
 			<Navbar />
 			<Overlay />
 			<Application />
+			<Information />
 			<Contact />
 			<Faq />
-			<Information />
 			<Map />
 			<Partners />
 		</div>

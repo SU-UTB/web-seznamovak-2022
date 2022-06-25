@@ -1,4 +1,7 @@
 import Link from '../atoms/Link'
+import nerd from '../../assets/img/nerd.png'
+import chatBubble from '../../assets/img/chat_bubble.png'
+import questionMark from '../../assets/img/question.png'
 
 const Information = () => {
   const totalPriceCZK = 2599
@@ -6,9 +9,11 @@ const Information = () => {
 
 
   return (
-    <section id="informace">
+    <section id="informace" className="bg-browny">
       <div>
-        <img src="" alt="nerd postava" />
+        <img src={nerd} alt="nerd postava" />
+        <img src={questionMark} alt="nerd postava" />
+        <img src={chatBubble} alt="nerd postava" />
         <div className="info-table">
           <div className="info-price">
             <h4>Kolik to stojí?</h4>

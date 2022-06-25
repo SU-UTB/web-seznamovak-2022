@@ -9,7 +9,8 @@ module.exports = {
         beige: '#FDECBE',
         dark_blu: '#222B45',
         orange: '#E25525',
-        yellow_orange: '#F3A548'
+        yellow_orange: '#F3A548',
+        browny: '#802010',
       }
     },
     fontFamily: {
