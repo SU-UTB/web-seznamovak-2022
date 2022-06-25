@@ -2,12 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-*, html {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 html {
   scroll-behavior: smooth;
 }
@@ -16,7 +10,7 @@ html {
   content: "";
   display: block;
   height: 100px;
-  margin: -100px 0 0;
+  /* margin: -100px 0 0; */
 }
 
 body {
@@ -24,6 +18,8 @@ body {
   font-family: 'Montserrat', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #222B45;
 }
 
 code {

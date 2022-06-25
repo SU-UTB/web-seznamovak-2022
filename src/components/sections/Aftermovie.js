@@ -1,3 +1,5 @@
+import '../../scss/Aftermovie.scss'
+
 const Aftermovie = () => {
   const ytSources = [
     'https://www.youtube.com/embed/3USX4ZVBYuw',
@@ -9,10 +11,11 @@ const Aftermovie = () => {
     <section id="aftermovie">
       { ytSources.map(ytSrc => (
         <iframe 
+          className="w-full" 
           key={ytSrc}
           src={ytSrc}
-          frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
-          allowFullScreen title="teaser" sandbox='allow-scripts allow-same-origin allow-presentation' loading='lazy'>
+          frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowFullScreen title="teaser" loading="lazy">
         </iframe>
         ))
       }

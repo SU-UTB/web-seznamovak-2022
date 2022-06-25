@@ -1,6 +1,7 @@
 #prihlaska {
-  background: url("../assets/img/blu_bg.png") no-repeat center;
+  background: url("../assets/img/blu_bg.png") repeat-y center;
   background-size: cover;
+  padding-bottom: 4rem;
 
   .info-text {
     background-color: rgba(48, 55, 79, 0.50);

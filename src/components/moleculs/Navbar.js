@@ -10,9 +10,9 @@ const Navbar = () => {
 
   const menuLinks = [
     { sectionLink: 'prihlaska', sectionName: 'PŘIHLÁŠKA' },
-    { sectionLink: 'info', sectionName: 'INFORMACE' },
+    { sectionLink: 'informace', sectionName: 'INFORMACE' },
     { sectionLink: 'instruktori', sectionName: 'INSTRUKTOŘI' },
-    { sectionLink: 'faq', sectionName: 'FAQ' },
+    // { sectionLink: 'faq', sectionName: 'FAQ' },
     { sectionLink: 'partneri', sectionName: 'PARTNEŘI' },
     { sectionLink: 'kontakt', sectionName: 'KONTAKT' }
   ]
@@ -42,7 +42,6 @@ const Navbar = () => {
           }
         </div>
         </ul>
-        
       </nav>
     </header>
   )

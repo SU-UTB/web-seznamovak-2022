@@ -43,7 +43,7 @@ const Application = () => {
   ]
 
   return (
-    <section id="prihlaska">
+    <section id="prihlaska" className="relative">
       <div className="w-full lg:w-4/5 mx-auto flex justify-around flex-wrap">
         {
           turnusList.map(({ title, date, totalPlaces, linkToAssign, color, data, isLoading, error, regLink, subRegLink}) => (
