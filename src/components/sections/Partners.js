@@ -8,12 +8,12 @@ const Partners = () => {
   return (
     <section id="partneri">
       <SectionTitle title="Partneři" />
+      <PartnerList items={facultyList} />
       <Link>
         <img src={utb.pic} alt={utb.picAlt} loading="lazy" />
       </Link>
-      <PartnerList items={facultyList} />
       <PartnerList items={unionList} />
-      <PartnerList items={partnerList} />
+      {/* <PartnerList items={partnerList} /> */}
     </section>
   )
 }
