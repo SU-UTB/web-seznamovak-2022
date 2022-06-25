@@ -17,10 +17,11 @@ const App = () => {
 			<Application />
 			<Information />
 			<Aftermovie />
-			<Contact />
-			{/* <Faq /> */}
 			<Map />
+			<Instructors />
+			{/* <Faq /> */}
 			<Partners />
+			<Contact />
 		</div>
 	)
 }
