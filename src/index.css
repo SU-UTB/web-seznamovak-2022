@@ -2,6 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+*, html {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:target::before {
+  content: "";
+  display: block;
+  height: 100px;
+  margin: -100px 0 0;
+}
+
 body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
