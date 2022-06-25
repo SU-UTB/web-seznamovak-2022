@@ -9,10 +9,10 @@ import '../../scss/Instructors.scss'
 const Instructors = () => {
   return (
     <section id="instruktori" className="bg-browny">
-      <div className="lg:w-3/5 text-left mx-auto py-16 px-4">
+      <div className="lg:w-3/5 text-left mx-auto">
         <SectionTitle title="A tito frajeři tě budou celým seznamovákem provázet." color="#FDECBE" />
       </div>
-      <div className="mx-4">
+      <div className="mx-4 pb-16">
       <Swiper
         slidesPerView={2}
         spaceBetween={20}
