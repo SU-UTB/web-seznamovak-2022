@@ -1,7 +1,10 @@
 #prihlaska {
-  background: url("../assets/img/blu_bg.png") repeat-y center;
+  background: url("../assets/img/bg_app_info.png") no-repeat bottom;
   background-size: cover;
-  padding-bottom: 4rem;
+
+  @media screen and (max-width: 1024px) {
+    background: url("../assets/img/blu_bg.png") repeat-y center;
+  }
 
   .info-text {
     background-color: rgba(48, 55, 79, 0.50);

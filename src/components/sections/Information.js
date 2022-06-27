@@ -1,7 +1,4 @@
 import Link from '../atoms/Link'
-import nerd from '../../assets/img/nerd.png'
-import chatBubble from '../../assets/img/chat_bubble.png'
-import questionMark from '../../assets/img/question.png'
 import '../../scss/Information.scss'
 
 const Information = () => {
@@ -16,21 +13,18 @@ const Information = () => {
 
 
   return (
-    <section id="informace" className="bg-browny text-center lg:text-left relative">
-      <div className="flex justify-center lg:justify-end lg:w-4/5 xl:w-3/5 mx-auto">
-        {/* <img src={nerd} alt="nerd postava" className="absolute -top-40" /> */}
-        {/* <img src={questionMark} alt="nerd postava" className="absolute -top-96 left-20" /> */}
-        {/* <img src={chatBubble} alt="nerd postava" className="block absolute top-20 right-20" /> */}
-        <div className="info-table w-full mx-4 lg:mx-0 md:w-full lg:w-4/5 xl:w-3/5 md:px-16 py-12 my-8 md:bg-beige">
-          <div className="info-price mb-8">
-            <h4 className="text-yellow_orange md:text-browny text-2xl uppercase font-extrabold">Kolik to stojí?</h4>
-            <p className="uppercase text-3xl font-bold mb-2 text-white md:text-dark_blu">{totalPriceCZK.toString()} / 105€</p>
-            <p className="text-white md:text-dark_blu">Zálohu {depositCZK.toString()} Kč pošleš při přihlášení a zbylých<br />1 000 Kč zaplatíš až na místě.</p>
+    <section id="informace" className="text-center lg:text-left lg:pb-32 px-4 lg:px-0">
+      <div className="info-container lg:mx-auto 3xl:w-3/5">
+        <div className="info-table w-full lg:flex lg:flex-col lg:items-end md:px-16 lg:px-32 2xl:px-52 3xl:px-16 py-12">
+          <div className="info-price mb-8 lg:w-1/2 xl:w-2/5 3xl:w-full 3xl:max-w-md">
+            <h4 className="text-yellow_orange lg:text-browny text-2xl uppercase font-extrabold">Kolik to stojí?</h4>
+            <p className="uppercase text-3xl font-bold mb-2 text-white lg:text-dark_blu">{totalPriceCZK.toString()} / 105€</p>
+            <p className="text-white lg:text-dark_blu">Zálohu {depositCZK.toString()} Kč pošleš při přihlášení a zbylých<br />1 000 Kč zaplatíš až na místě.</p>
           </div>
-          <div className="info-place mb-8">
-          <h4 className="text-yellow_orange md:text-browny text-2xl uppercase font-extrabold">KDE BUDU?</h4>
-            <p className="uppercase text-3xl font-bold mb-2 text-white md:text-dark_blu">Kemp Ranč Bystřička</p>
-            <div className="flex justify-center flex-col md:flex-row lg:justify-start gap-y-4 md:gap-x-6 text-white md:text-dark_blu">
+          <div className="info-place mb-8 lg:w-1/2 xl:w-2/5 3xl:w-full 3xl:max-w-md">
+          <h4 className="text-yellow_orange lg:text-browny text-2xl uppercase font-extrabold">KDE BUDU?</h4>
+            <p className="uppercase text-3xl font-bold mb-2 text-white lg:text-dark_blu">Kemp Ranč Bystřička</p>
+            <div className="flex justify-center flex-col md:flex-row lg:justify-start gap-y-4 md:gap-x-6 text-white lg:text-dark_blu">
               {
                 links.map(({ linkName, linkTo }) => (
                   <Link key={linkName} linkName={linkName} linkTo={linkTo} />
@@ -38,9 +32,9 @@ const Information = () => {
               }
             </div>
           </div>
-          <div className="info-prepare-or-die">
-            <h4 className="text-yellow_orange md:text-browny text-2xl uppercase font-extrabold">JAK SE MÁM PŘIPRAVIT?</h4>
-            <p className="text-white md:text-dark_blu">Ubytování v chatkách a kompletní strava po celý pobyt je zajištěna.Vezmi si sportovní oblečení na teplé dny, ale i na chladnější rána.	A hlavně si nezapomeň dobrou náladu! Bude to jízda! Koukni na minulé ročníky!</p>
+          <div className="info-prepare-or-die lg:w-1/2 xl:w-2/5 3xl:w-full 3xl:max-w-md">
+            <h4 className="text-yellow_orange lg:text-browny text-2xl uppercase font-extrabold">JAK SE MÁM PŘIPRAVIT?</h4>
+            <p className="text-white lg:text-dark_blu">Ubytování v chatkách a kompletní strava po celý pobyt je zajištěna.Vezmi si sportovní oblečení na teplé dny, ale i na chladnější rána.	A hlavně si nezapomeň dobrou náladu! Bude to jízda! Koukni na minulé ročníky!</p>
           </div>
         </div>
       </div>

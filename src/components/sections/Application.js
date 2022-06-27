@@ -1,20 +1,20 @@
 import TurnusItem from '../moleculs/TurnusItem'
 import '../../scss/Application.scss'
 import useGoogleSheets from 'use-google-sheets'
+import Information from './Information'
+import InfoText from '../InfoText'
 
 const Application = () => {
   
 
   const { data: turnusOneData, loading: isLoadingTurnusOne, error: errorTurnusOne } = useGoogleSheets({
     apiKey: process.env.REACT_APP_SHEETS_API_KEY,
-    sheetId: process.env.REACT_APP_SHEET_ID,
-    sheetsNames: ['List 1']
+    sheetId: process.env.REACT_APP_SHEET_TURNUS_ONE_ID,
   })
 
   const { data: turnusTwoData, loading: isLoadingTurnusTwo, error: errorTurnusTwo } = useGoogleSheets({
     apiKey: process.env.REACT_APP_SHEETS_API_KEY,
-    sheetId: process.env.REACT_APP_SHEET_ID,
-    sheetsNames: ['List 1']
+    sheetId: process.env.REACT_APP_SHEET_TURNUS_TWO_ID,
   })
   
   const turnusList = [
@@ -42,9 +42,18 @@ const Application = () => {
     },
   ]
 
+  const totalPriceCZK = 2599
+  const depositCZK = totalPriceCZK - 1000
+
+  const links = [
+    { linkName: 'Mapa zde', linkTo: 'https://goo.gl/maps/mTdBDjBknPJoU5Yr8/' },
+    { linkName: 'IDOS spoje zde', linkTo: 'https://idos.idnes.cz/vlakyautobusy/spojeni/vysledky/?date=22.08.2022&time=&f=&t=Byst%C5%99i%C4%8Dka,,u%20Nov%C3%A1k%C5%AF&tc=200003/' },
+    { linkName: 'Web kempu zde', linkTo: 'http://kemp-bystricka.cz/' }
+  ]
+
   return (
     <section id="prihlaska" className="relative">
-      <div className="w-full lg:w-4/5 mx-auto flex justify-around flex-wrap">
+      <div className="w-full lg:w-4/5 mx-auto flex justify-around flex-wrap pt-32 lg:pb-16">
         {
           turnusList.map(({ title, date, totalPlaces, linkToAssign, color, data, isLoading, error, regLink, subRegLink}) => (
             <TurnusItem 
@@ -63,14 +72,8 @@ const Application = () => {
           ))
         }
       </div>
-      <div className="info-text py-6 px-8 mt-16 text-beige mx-4 sm:w-4/5 lg:w-3/5 sm:mx-auto text-lg text-left">
-        <p className="mb-4">Právě se rozmýšlíš nad nejlepším rozhodnutím svého života. Jo, jakože FAKT!</p>
-        <p className="mb-4"> <span className="font-bold">Celouniverzitní Seznamovák UTB</span> již 5. rokem přichází na scénu. Tuto nabombenou akci pod záštitou Univerzity Tomáše Bati ve Zlíně pro Tebe připravuje <span className="font-bold">Studentská unie UTB</span> - parta pohodových lidí, kteří se postarají o nezapomenutelnou tečku za koncem léta.</p>
-        <p className="mb-4">Je libo kamarády na celý život? Zážitky, kterými se můžeš chlubit kámošům u piva? Či letní lásku nečekanou? U nás můžeš dělat co chceš, jít spát kdy chceš a hlavně… <span className="font-bold">Být sám sebou!</span></p>
-        <p className="mb-4">Po Seznamováku zcela jistě zjistíš, že Zlín byla ta správná volba. Město studentů, talentovaných lidí, ale hlavně to bude tvůj domov, ze kterého se ti bude těžce odjíždět.</p>
-        <p className="mb-4">Jdeš do toho že jo? Tak pošli přihlášku a dojeď za námi na Bystřičku. My se Tě už nemůžeme dočkat.</p>
-        <p className="font-bold">Začíná to UTeBe, začíná to na Seznamováku!</p>
-      </div>
+      <InfoText />
+      <Information />
     </section>
   )
 }

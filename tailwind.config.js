@@ -5,6 +5,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        '3xl': '1800px'
+      },
       colors: {
         beige: '#FDECBE',
         dark_beige: '#FBD570',

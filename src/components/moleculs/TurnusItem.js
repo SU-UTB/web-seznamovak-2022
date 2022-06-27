@@ -1,7 +1,7 @@
 import { SpinnerCircular } from 'spinners-react'
 
 const TurnusItem = ({ title, date, totalPlaces, color, data, isLoading, error, regLink, subRegLink }) => {
-
+  console.log(data)
   const availablePlaces = data.length > 0 ? totalPlaces - data[0].data.length : 0
 
   return (

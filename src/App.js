@@ -15,7 +15,7 @@ const App = () => {
 			<Navbar />
 			<Overlay />
 			<Application />
-			<Information />
+			{/* <Information /> */}
 			<Aftermovie />
 			<Map />
 			<Instructors />
