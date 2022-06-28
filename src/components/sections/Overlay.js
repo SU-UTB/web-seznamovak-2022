@@ -20,7 +20,7 @@ const Overlay = () => {
       <div className="lay5 moving-obj"></div>
       <div className="lay6 moving-obj"></div>
       <div className="lay7 moving-obj"></div>
-      <img className="moving-obj" src={logo} alt="seznamovak 2022 logo" />
+      <img className="moving-obj logo" src={logo} alt="seznamovak 2022 logo" />
     </div>
   )
 }
