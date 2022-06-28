@@ -20,8 +20,10 @@ const Contact = () => {
           desc={suSocials.desc}
           fbLink={suSocials.fbLink}
           fbImg={suSocials.fbImg}
+          fbImgWebp={suSocials.fbImgWebp}
           igLink={suSocials.igLink}
           igImg={suSocials.igImg}
+          igImgWebp={suSocials.igImgWebp}
         />
         <div className="lg:hidden">
           <SectionTitle title="MANAŽEŘI PROJEKTU" />
@@ -33,8 +35,10 @@ const Contact = () => {
                 title={manager.name}
                 fbLink={manager.fbLink}
                 fbImg={manager.fbImg}
+                fbImgWebp={manager.fbImgWebp}
                 igLink={manager.igLink}
                 igImg={manager.igImg}
+                igImgWebp={manager.igImgWebp} 
               />
             ))
           }

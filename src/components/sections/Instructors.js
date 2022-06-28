@@ -1,5 +1,6 @@
 import SectionTitle from '../atoms/SectionTitle'
 import instructors from '../../data/instructorsList'
+import Picture from '../atoms/Picture'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation } from 'swiper'
 import 'swiper/css'
@@ -40,7 +41,7 @@ const Instructors = () => {
         {
           instructors.map(instructor => (
               <SwiperSlide key={instructor.pic}>
-                <img src={instructor.pic} alt={instructor.name} />
+                <Picture imgSrc={instructor.pic} webpImgSrc={instructor.webPic} imgAlt={instructor.name} />
                 <h5 className="font-bold text-xl md:text-3xl xl:text-4xl text-beige my-4">{instructor.name}</h5>
               </SwiperSlide>
           ))

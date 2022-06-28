@@ -48,7 +48,7 @@ const Application = () => {
   ]
 
   return (
-    <section id="prihlaska" className="relative">
+    <section id="prihlaska">
       <div className="w-full lg:w-4/5 mx-auto flex justify-around flex-wrap pt-32 lg:pb-16">
         {!shouldStartRegistration && <Notification />}
         {
