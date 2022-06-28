@@ -3,22 +3,24 @@ import '../../scss/Application.scss'
 import useGoogleSheets from 'use-google-sheets'
 import Information from './Information'
 import InfoText from '../InfoText'
-import { useState } from 'react'
 import Notification from '../moleculs/Notification'
-import { useEffect } from 'react'
 
 const Application = () => {
-  const [shouldStartRegistration, setShouldStartRegistration] = useState(false)  
+  // year:month(0-11):day:hour:minute:second
+  const startDate = new Date(2022, 6, 5, 0, 0, 0)
+  const shouldStartRegistration = Date.now() >= startDate
 
-  const { data: turnusOneData, loading: isLoadingTurnusOne, error: errorTurnusOne } = useGoogleSheets({
-    apiKey: process.env.REACT_APP_SHEETS_API_KEY,
-    sheetId: process.env.REACT_APP_SHEET_TURNUS_ONE_ID,
-  })
+  const { data: turnusOneData, loading: isLoadingTurnusOne, error: errorTurnusOne } = shouldStartRegistration ?
+    useGoogleSheets({
+      apiKey: process.env.REACT_APP_SHEETS_API_KEY,
+      sheetId: process.env.REACT_APP_SHEET_TURNUS_ONE_ID,
+  }) : { data: null, loading: false, error: null }
 
-  const { data: turnusTwoData, loading: isLoadingTurnusTwo, error: errorTurnusTwo } = useGoogleSheets({
-    apiKey: process.env.REACT_APP_SHEETS_API_KEY,
-    sheetId: process.env.REACT_APP_SHEET_TURNUS_TWO_ID,
-  })
+  const { data: turnusTwoData, loading: isLoadingTurnusTwo, error: errorTurnusTwo } = shouldStartRegistration ? 
+    useGoogleSheets({
+      apiKey: process.env.REACT_APP_SHEETS_API_KEY,
+      sheetId: process.env.REACT_APP_SHEET_TURNUS_TWO_ID,
+  }) : { data: null, loading: false, error: null }
   
   const turnusList = [
     {
@@ -44,18 +46,6 @@ const Application = () => {
       subRegLink: 'https://forms.gle/yCaTPcaRN2DKTshD6'
     },
   ]
-
-
-  const startDate = new Date(2022, 22, 6, 0, 0, 0)
-
-  useEffect(() => {
-    console.log(`START DATE: ${startDate.getTime()}`)
-    console.log(`DATE: ${Date.now()}`)
-    if (startDate.getTime() <= Date.now()) {
-      console.log(startDate.getTime() <= Date.now())
-      setShouldStartRegistration(true)
-    }
-  }, [])
 
   return (
     <section id="prihlaska" className="relative">
