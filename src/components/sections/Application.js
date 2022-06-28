@@ -3,9 +3,12 @@ import '../../scss/Application.scss'
 import useGoogleSheets from 'use-google-sheets'
 import Information from './Information'
 import InfoText from '../InfoText'
+import { useState } from 'react'
+import Notification from '../moleculs/Notification'
+import { useEffect } from 'react'
 
 const Application = () => {
-  
+  const [shouldStartRegistration, setShouldStartRegistration] = useState(false)  
 
   const { data: turnusOneData, loading: isLoadingTurnusOne, error: errorTurnusOne } = useGoogleSheets({
     apiKey: process.env.REACT_APP_SHEETS_API_KEY,
@@ -42,19 +45,24 @@ const Application = () => {
     },
   ]
 
-  const totalPriceCZK = 2599
-  const depositCZK = totalPriceCZK - 1000
 
-  const links = [
-    { linkName: 'Mapa zde', linkTo: 'https://goo.gl/maps/mTdBDjBknPJoU5Yr8/' },
-    { linkName: 'IDOS spoje zde', linkTo: 'https://idos.idnes.cz/vlakyautobusy/spojeni/vysledky/?date=22.08.2022&time=&f=&t=Byst%C5%99i%C4%8Dka,,u%20Nov%C3%A1k%C5%AF&tc=200003/' },
-    { linkName: 'Web kempu zde', linkTo: 'http://kemp-bystricka.cz/' }
-  ]
+  const startDate = new Date(2022, 22, 6, 0, 0, 0)
+
+  useEffect(() => {
+    console.log(`START DATE: ${startDate.getTime()}`)
+    console.log(`DATE: ${Date.now()}`)
+    if (startDate.getTime() <= Date.now()) {
+      console.log(startDate.getTime() <= Date.now())
+      setShouldStartRegistration(true)
+    }
+  }, [])
 
   return (
     <section id="prihlaska" className="relative">
       <div className="w-full lg:w-4/5 mx-auto flex justify-around flex-wrap pt-32 lg:pb-16">
+        {!shouldStartRegistration && <Notification />}
         {
+          shouldStartRegistration &&
           turnusList.map(({ title, date, totalPlaces, linkToAssign, color, data, isLoading, error, regLink, subRegLink}) => (
             <TurnusItem 
               key={title}
