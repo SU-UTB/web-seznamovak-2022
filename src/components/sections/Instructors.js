@@ -8,7 +8,7 @@ import '../../scss/Instructors.scss'
 
 const Instructors = () => {
   return (
-    <section id="instruktori" className="bg-browny">
+    <section id="instruktori">
       <div className="lg:w-3/5 text-left mx-auto">
         <SectionTitle title="A tito frajeři tě budou celým seznamovákem provázet." color="#FDECBE" />
       </div>
