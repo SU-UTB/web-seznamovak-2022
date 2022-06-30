@@ -4,6 +4,7 @@ import useGoogleSheets from 'use-google-sheets'
 import Information from './Information'
 import InfoText from '../InfoText'
 import Notification from '../moleculs/Notification'
+import TurnusHeadline from '../moleculs/TurnusHeadline'
 
 const Application = () => {
   // year:month(0-11):day:hour:minute:second
@@ -25,7 +26,7 @@ const Application = () => {
   const turnusList = [
     {
       title: '1. Turnus',
-      date: '22.8. – 25.8.2022',
+      date: '22. 8. – 25. 8. 2022',
       totalPlaces: 100,
       color: '#E25525',
       data: turnusOneData,
@@ -36,7 +37,7 @@ const Application = () => {
     },
     {
       title: '2. Turnus',
-      date: '29.8. – 1.9.2022',
+      date: '29. 8. – 1. 9. 2022',
       totalPlaces: 100,
       color: '#F3A548',
       data: turnusTwoData,
@@ -50,7 +51,19 @@ const Application = () => {
   return (
     <section id="prihlaska">
       <div className="w-full lg:w-4/5 mx-auto flex justify-around flex-wrap pt-32 lg:pb-16">
-        {!shouldStartRegistration && <Notification />}
+        {!shouldStartRegistration &&
+          <div className="notify-headline w-full">
+            <Notification />
+            <div className="flex justify-around flex-wrap w-full lg:w-4/5 mx-auto pt-16">
+              {
+                turnusList.map(({ title, date, color }) => (
+                  <TurnusHeadline key={title} title={title} date={date} color={color} />
+                ))
+              }
+            </div>
+          </div>
+          
+        }
         {
           shouldStartRegistration &&
           turnusList.map(({ title, date, totalPlaces, linkToAssign, color, data, isLoading, error, regLink, subRegLink}) => (
@@ -66,6 +79,7 @@ const Application = () => {
               error={error}
               regLink={regLink}
               subRegLink={subRegLink}
+              shouldStart={shouldStartRegistration}
             />
           ))
         }
