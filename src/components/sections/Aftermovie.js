@@ -11,7 +11,7 @@ const Aftermovie = () => {
     <section id="aftermovie">
       { ytSources.map(ytSrc => (
         <iframe 
-          className="w-full" 
+          className="w-full relative z-30" 
           key={ytSrc}
           src={ytSrc}
           frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 

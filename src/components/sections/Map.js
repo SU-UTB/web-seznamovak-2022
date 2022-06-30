@@ -2,7 +2,7 @@ const Map = ({ mapSrc = 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d41
   return (
     <div id="mapa">
       <iframe
-        className="w-full h-96" 
+        className="w-full h-96 relative z-30" 
         src={mapSrc}
         frameBorder="0"
         title="mapa"

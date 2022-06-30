@@ -4,7 +4,7 @@ import Link from '../atoms/Link'
 
 const ContactSocials = ({ title, desc, fbLink, fbImg, fbImgWebp, igLink, igImg, igImgWebp }) => {
   return (
-    <div className="socials lg:mt-auto">
+    <div className="socials lg:mt-auto relative z-30">
       <div className="text-center">
         <ContactTitle title={title} />
       </div>

@@ -21,6 +21,8 @@ const Overlay = () => {
       <div className="lay6 moving-obj"></div>
       <div className="lay7 moving-obj"></div>
       <img className="moving-obj logo" src={logo} alt="seznamovak 2022 logo" />
+      <div className="pattern"></div>
+      <div className="pattern-mobile"></div>
     </div>
   )
 }

@@ -3,7 +3,7 @@ import Link from '../atoms/Link'
 
 const SuSocials = ({ title, desc, fbLink, fbImg, igLink, igImg }) => {
   return (
-    <div className="socials text-center lg:text-left">
+    <div className="socials text-center lg:text-left relative z-30">
       <ContactTitle title={title} />
       <p className="mb-4">{desc}</p>
       <div className="img-links flex justify-center gap-x-6 lg:gap-x-0 lg:justify-between lg:max-w-xs mb-12">

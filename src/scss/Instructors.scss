@@ -2,6 +2,10 @@
   background: url("./../assets/img/bg_instructors.webp") no-repeat center;
   background-size: cover;
 
+  .swiper {
+    z-index: 30;
+  }
+
   .swiper-slide {
     display: flex;
     flex-direction: column;

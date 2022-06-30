@@ -1,11 +1,51 @@
-.overlay {
-  height: 1000px;
+.pattern-mobile {
+  background-repeat: repeat-y;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  position: fixed;
+  mix-blend-mode: overlay;
+  z-index: 20;
+  pointer-events: none;
 
   @media only screen and (max-width: 768px) {
+    background-image: url("../assets/img/pattern_mobile.png");
+  }
+}
+
+.pattern {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  opacity: 40%;
+  mix-blend-mode: overlay;
+  z-index: 12;
+  pointer-events: none;
+
+  @media only screen and (min-width: 769px) {
+    background-image: url("../assets/img/pattern.png");
+  }
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
+}
+
+.overlay {
+  height: 900px;
+  width: 100%;
+
+  @media only screen and (max-width: 768px) {
+    position: bottom;
     height: 100vh;
     background: url("../assets/img/banner/uvod-mob.webp") no-repeat center;
     background-size: cover;
   }
+
+  @media only screen and (max-width: 576px) {
+    height: 75vh;
+  }
+
+  
 
   .lay1 {
     width: 100%;
