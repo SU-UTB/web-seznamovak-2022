@@ -23,7 +23,6 @@ const Navbar = () => {
     { socialLink: 'https://www.facebook.com/studentskaunieutb', socialIconImg: fbIcon, socialPlatform: 'facebook' }
   ]
 
-
   return (
     <header className="sticky h-16 top-0 w-full bg-dark_blu z-50">
       <nav className="flex flex-col items-center relative">

@@ -6,7 +6,7 @@ const TurnusItem = ({ title, date, range, totalPlaces, color, data, isLoading, e
 
   return (
     <div className="turnus mx-4 mb-32 lg:mb-12 xl:mb-0">
-      <TurnusHeadline title={title} date={date} range={range}/>
+      <TurnusHeadline title={title} date={date} range={range} />
       { isLoading &&
         <div className="flex justify-center">
           <SpinnerCircular thickness={220} color="#FDECBE" />

@@ -22,8 +22,7 @@ const Overlay = () => {
       <div className="lay7 moving-obj"></div>
       <img className="moving-obj logo" src={logo} alt="seznamovak 2022 logo" />
       <div className="pattern"></div>
-      <a className="cursorzone">
-      </a>
+      <a className="cursorzone"></a>
       <div className="pattern-mobile"></div>
     </div>
   )

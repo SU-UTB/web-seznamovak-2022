@@ -1,4 +1,4 @@
-import '../../scss/Overlay.scss'
+import '../../scss/Navbar.scss'
 
 const MenuLink = ({ sectionLink, sectionName }) => {
   return (
