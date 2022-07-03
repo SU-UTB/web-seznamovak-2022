@@ -1,19 +1,19 @@
 import { SpinnerCircular } from 'spinners-react'
 import TurnusHeadline from './TurnusHeadline'
 
-const TurnusItem = ({ title, date, totalPlaces, color, data, isLoading, error, regLink, subRegLink }) => {
+const TurnusItem = ({ title, date, range, totalPlaces, color, data, isLoading, error, regLink, subRegLink }) => {
   const availablePlaces = data.length > 0 ? totalPlaces - data[0].data.length : 0
 
   return (
     <div className="turnus mx-4 mb-32 lg:mb-12 xl:mb-0">
-      <TurnusHeadline title={title} date={date} />
-      { isLoading && 
+      <TurnusHeadline title={title} date={date} range={range}/>
+      { isLoading &&
         <div className="flex justify-center">
-          <SpinnerCircular thickness={220} color="#FDECBE" /> 
+          <SpinnerCircular thickness={220} color="#FDECBE" />
         </div>
       }
       { error && <p className="text-beige text-2xl">Neco se pokazilo...</p> }
-      { data.length > 0 &&  
+      { data.length > 0 &&
         <div>
           <p className="mb-8 font-medium text-3xl" style={{color: `${color}`}}>
             {availablePlaces > 0 ? `Zbývá ${availablePlaces}/${totalPlaces}` : 'Vyprodáno'}

@@ -17,16 +17,17 @@ const Application = () => {
       sheetId: process.env.REACT_APP_SHEET_TURNUS_ONE_ID,
   }) : { data: null, loading: false, error: null }
 
-  const { data: turnusTwoData, loading: isLoadingTurnusTwo, error: errorTurnusTwo } = shouldStartRegistration ? 
+  const { data: turnusTwoData, loading: isLoadingTurnusTwo, error: errorTurnusTwo } = shouldStartRegistration ?
     useGoogleSheets({
       apiKey: process.env.REACT_APP_SHEETS_API_KEY,
       sheetId: process.env.REACT_APP_SHEET_TURNUS_TWO_ID,
   }) : { data: null, loading: false, error: null }
-  
+
   const turnusList = [
     {
       title: '1. Turnus',
       date: '22. 8. – 25. 8. 2022',
+      range: '(pondělí – čtvrtek)',
       totalPlaces: 100,
       color: '#E25525',
       data: turnusOneData,
@@ -38,6 +39,7 @@ const Application = () => {
     {
       title: '2. Turnus',
       date: '29. 8. – 1. 9. 2022',
+      range: '(pondělí – čtvrtek)',
       totalPlaces: 100,
       color: '#F3A548',
       data: turnusTwoData,
@@ -56,23 +58,23 @@ const Application = () => {
             <Notification />
             <div className="flex justify-around flex-wrap w-full lg:w-4/5 mx-auto pt-16">
               {
-                turnusList.map(({ title, date, color }) => (
-                  <TurnusHeadline key={title} title={title} date={date} color={color} />
+                turnusList.map(({ title, date, color, range }) => (
+                  <TurnusHeadline key={title} title={title} date={date} range={range} color={color} />
                 ))
               }
             </div>
           </div>
-          
+
         }
         {
           shouldStartRegistration &&
           turnusList.map(({ title, date, totalPlaces, linkToAssign, color, data, isLoading, error, regLink, subRegLink}) => (
-            <TurnusItem 
+            <TurnusItem
               key={title}
-              title={title} 
-              date={date} 
-              totalPlaces={totalPlaces} 
-              linkToAssign={linkToAssign} 
+              title={title}
+              date={date}
+              totalPlaces={totalPlaces}
+              linkToAssign={linkToAssign}
               color={color}
               data={data}
               isLoading={isLoading}
