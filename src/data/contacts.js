@@ -13,7 +13,7 @@ import igDaveWebp from '../assets/img/contact/igDave.webp'
 
 export const suSocials = {
     name: 'STUDENTSKÁ UNIE',
-    desc: 'Jsme tu pro tebe, pokud se budeš chtít na cokoliv zaptat, ozvi se nám na profil.',
+    desc: 'Jsme tu pro tebe, pokud se budeš chtít na cokoliv zeptat, ozvi se nám na profil.',
     fbLink: 'https://www.facebook.com/studentskaunieutb',
     fbImg: fbSU,
     fbImgWebp: fbSUWebp,
@@ -29,7 +29,7 @@ export const managersSocials = [
     fbLink: 'https://www.facebook.com/AlenaSkarupova',
     fbImg: fbAlenka,
     fbImgWebp: fbAlenkaWebp,
-    igLink: '',
+    igLink: 'https://www.instagram.com/alenaskarupova/',
     igImg: igAlenka,
     igImgWebp: igAlenkaWebp
   },

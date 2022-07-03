@@ -10,11 +10,11 @@ const Aftermovie = () => {
   return (
     <section id="aftermovie">
       { ytSources.map(ytSrc => (
-        <iframe 
-          className="w-full relative z-30" 
+        <iframe
+          className="w-full relative z-30"
           key={ytSrc}
           src={ytSrc}
-          frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen title="teaser" loading="lazy">
         </iframe>
         ))

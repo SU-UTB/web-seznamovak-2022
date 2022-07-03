@@ -4,6 +4,7 @@ import SocialIcon from '../atoms/SocialIcon'
 import fbIcon from '../../assets/img/navbar/fb.svg'
 import igIcon from '../../assets/img/navbar/ig.svg'
 import HamburgerBtn from '../atoms/HamburgerBtn'
+import '../../scss/Navbar.scss'
 
 const Navbar = () => {
   const [isNavOpened, setIsNavOpened] = useState(false)
@@ -21,7 +22,6 @@ const Navbar = () => {
     { socialLink: 'https://www.instagram.com/studentskaunieutb/', socialIconImg: igIcon, socialPlatform: 'instagram' },
     { socialLink: 'https://www.facebook.com/studentskaunieutb', socialIconImg: fbIcon, socialPlatform: 'facebook' }
   ]
-  
 
   return (
     <header className="sticky h-16 top-0 w-full bg-dark_blu z-50">

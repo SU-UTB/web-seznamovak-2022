@@ -1,6 +1,8 @@
+import '../../scss/Navbar.scss'
+
 const MenuLink = ({ sectionLink, sectionName }) => {
   return (
-    <a className="text-beige uppercase font-semibold text-xl" href={`#${sectionLink}`}>{sectionName}</a>
+    <a className="navbutton" href={`#${sectionLink}`}>{sectionName}</a>
   )
 }
 

@@ -34,7 +34,7 @@ const Information = () => {
           </div>
           <div className="info-prepare-or-die lg:w-1/2 xl:w-2/5 3xl:w-full 3xl:max-w-md">
             <h4 className="text-yellow_orange lg:text-browny text-2xl uppercase font-extrabold">JAK SE MÁM PŘIPRAVIT?</h4>
-            <p className="text-white lg:text-dark_blu">Ubytování v chatkách a kompletní strava po celý pobyt je zajištěna.Vezmi si sportovní oblečení na teplé dny, ale i na chladnější rána.	A hlavně si nezapomeň dobrou náladu! Bude to jízda! Koukni na minulé ročníky!</p>
+            <p className="text-white lg:text-dark_blu">Ubytování v chatkách a kompletní strava po celý pobyt je zajištěna. Vezmi si sportovní oblečení na teplé dny, ale i na chladnější rána.	A hlavně si nezapomeň dobrou náladu! Bude to jízda! Koukni na minulé ročníky!</p>
           </div>
         </div>
       </div>
