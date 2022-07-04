@@ -2,9 +2,9 @@ import '../../scss/Aftermovie.scss'
 
 const Aftermovie = () => {
   const ytSources = [
+    'https://www.youtube.com/embed/kR-IGHd-260',
     'https://www.youtube.com/embed/3USX4ZVBYuw',
     'https://www.youtube.com/embed/I_tYUzDFuTw',
-    'https://www.youtube.com/embed/sB2v7_IGqsc'
   ]
 
   return (
