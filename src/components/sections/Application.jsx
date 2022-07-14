@@ -45,7 +45,7 @@ const Application = () => {
       error: errorTurnusOne,
       regLink: 'https://forms.gle/qaEwv6kxMw4oHnQK6',
       subRegLink: 'https://forms.gle/qaEwv6kxMw4oHnQK6',
-      outOfStock: false,
+      outOfStock: true,
     },
     {
       title: '2. Turnus',
