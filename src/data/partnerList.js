@@ -1,19 +1,16 @@
-import utbLogo from '../assets/img/utb.svg'
 import fai from '../assets/img/fakulty/fai.svg'
 import fame from '../assets/img/fakulty/fame.svg'
 import fhs from '../assets/img/fakulty/fhs.svg'
 import flkr from '../assets/img/fakulty/flkr.svg'
-import ft from '../assets/img/fakulty/ft.svg'
 import fmk from '../assets/img/fakulty/fmk.svg'
-import su from '../assets/img/unie/su.png'
-import usuh from '../assets/img/unie/usuh.jpg'
-import kofola from '../assets/img/partneri/kofola.png'
-import zubr from '../assets/img/partneri/logo_zubr.jpg'
-import kemp from '../assets/img/partneri/kemp2.png'
+import ft from '../assets/img/fakulty/ft.svg'
 import alisy from '../assets/img/partneri/alisyLogo.png'
-import redbull from '../assets/img/partneri/redbull.png'
+import bumerangFilm from '../assets/img/partneri/bumerangFilm.svg'
 import captain from '../assets/img/partneri/captain.png'
-import nadace from '../assets/img/partneri/nadace.jpg'
+import ruzovySlon from '../assets/img/partneri/ruzovySlon.jpg'
+import su from '../assets/img/unie/su.png'
+import usuh from '../assets/img/unie/usuh.png'
+import utbLogo from '../assets/img/utb.svg'
 
 export const utb = { link: 'https://utb.cz/', pic: utbLogo, picAlt: 'utb' }
 
@@ -27,16 +24,13 @@ export const facultyList = [
 ]
 
 export const unionList = [
-  {	link: 'https://su.utb.cz/', pic: su, picAlt: 'su' },
+  { link: 'https://su.utb.cz/', pic: su, picAlt: 'su' },
   { link: 'http://www.usuh.cz/', pic: usuh, picAlt: 'usuh' },
 ]
 
 export const partnerList = [
-  { link: 'http://kemp-bystricka.cz/', pic: kemp, picAlt: 'kemp' },
-  { link: 'http://www.zubr.cz/', pic: zubr, picAlt: 'zubr' },
-  { link: 'https://www.redbull.cz/', pic: redbull, picAlt: 'redbull' },
-  { link: 'https://www.kofola.cz/', pic: kofola, picAlt: 'kofola' },
-  { link: 'https://www.captainmorgan.com/cs-cz/', pic: captain, picAlt: 'captain morgan' },
-  { link: 'https://nadace.kostnidren.cz/', pic: nadace, picAlt: 'kostni dren nadace' },
-  { link: 'http://www.alisy.cz/', pic: alisy, picAlt: 'alisy' }
+  { pic: bumerangFilm, picAlt: 'bumerang film' },
+  { pic: ruzovySlon, picAlt: 'růžový slon' },
+  { pic: captain, picAlt: 'captain morgan' },
+  { pic: alisy, picAlt: 'alisy' },
 ]
